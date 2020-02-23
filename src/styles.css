@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+/* @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css'); */
+
+body {
+  background-color: #fafafa;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+fx-signup-form{
+    display:flex;
+    height:100%;
+    width:100%;
+    justify-content: center;
+    align-items:center;
+}
+
+.mat-form-field-flex{
+    width:400px !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-subscript-wrapper{
+    padding:0 5px !important;
+}
+
+@media only screen and (max-width: 479px) {
+    .mat-form-field-flex{
+        width:325px !important;
+    }
+}
+

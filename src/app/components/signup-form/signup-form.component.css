@@ -1,0 +1,47 @@
+.form-container{
+    margin-top:0px;
+}
+
+.form-container h1{
+    font-size:32px;
+    margin-top:100px;
+}
+
+.mat-form-field{
+    display:flex !important;
+}
+
+.btn-signup{
+    width: 250PX;
+    height: 50px;
+    background-color: #ff6200;
+    border:1px solid #ff6200;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1.11px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+    margin-bottom:75px;
+    margin-top:25px;
+}
+
+.btn-signup:hover,.btn-signup:active{
+    background-color: darkorange;
+}
+
+.disabled{
+    background-color:darkgray;
+    border:1px solid darkgray;
+}
+
+.disabled:hover{
+    background-color:darkgray;
+    border:1px solid darkgray;
+}
+
+.post-success{
+    color:green !important;
+    font-size:18px !important;
+}

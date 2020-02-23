@@ -1,0 +1,35 @@
+<div class="form-container">
+  <h1>Sign up for FedEx</h1>
+  <form [formGroup]="signupForm">
+
+      <mat-form-field appearance="fill">
+        <mat-label for="firstName">First Name</mat-label>
+        <input matInput id="firstName" [formControl]="firstnameFormControl" [(ngModel)]="user.firstName">
+        <mat-error *ngIf="firstnameFormControl.invalid">Kindly enter a value</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="lastName">Last Name</mat-label>
+        <input matInput id="lastName" [formControl]="lastnameFormControl"  [(ngModel)]="user.lastName">
+        <mat-error *ngIf="lastnameFormControl.invalid">Kindly enter a value</mat-error>
+      </mat-form-field>
+       
+      <mat-form-field appearance="fill">
+        <mat-label for="email">Email</mat-label>
+        <input matInput id="email" [formControl]="emailFormControl" [(ngModel)]="user.email"> 
+        <mat-error *ngIf="emailFormControl.invalid">Kindly enter a valid email</mat-error>
+      </mat-form-field>
+       
+      <mat-form-field appearance="fill">
+        <mat-label for="password">Password</mat-label>
+        <input matInput id="password" [formControl]="passwordFormControl" [(ngModel)]="user.password" type="password" (keyup)="checkPassword()">
+        <mat-error *ngIf="passwordFormControl.invalid">Password should be minimum 8 characters,including atleast one uppercase and one lowercase.</mat-error>
+        <mat-error *ngIf="passwordFormControl.invalid">Password cannot contain first or last name</mat-error>
+      </mat-form-field>
+
+    <button class="btn-signup btn" [disabled] = "!signupForm.valid" [ngClass]="{'disabled': !signupForm.valid}" (click)="onSubmit()">
+        SIGN UP NOW
+    </button>
+    <mat-label *ngIf="postSuccess" class="post-success">Registration Successful</mat-label>
+  </form>
+</div>

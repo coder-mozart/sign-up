@@ -1,0 +1,15 @@
+header {
+  z-index: 13000;
+  position: fixed;
+  top: 0;
+  height: 75px;
+  background-color: #4d148c;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+
+header img {
+  max-width: 88px;
+}
